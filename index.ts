@@ -4,7 +4,10 @@ import MessageFilter from "./filters/MessageFilter";
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMessages] });
 
-const token = "MTQzNTY5OTA5NTYzMjIxNjE5NQ.G5uy_G.-gEv76MpBB8IJDSpZ9A2YktEAFMCjoFtQBiIRQ";
+
+
+const token = process.env.TOKEN;
+
 
 function main() {
     client.on(Events.ClientReady, readyClient => {
